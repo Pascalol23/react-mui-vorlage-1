@@ -1,7 +1,14 @@
-import Typography from "@mui/material/Typography";
+import React from "react";
+import { VegaLite } from "react-vega"; // VegaLite importieren
+import visualizationSpec from "./Beispiel.json"; // JSON-Datei importieren
 
 function App() {
-  return <Typography variant="h3">Hello React + MUI!</Typography>;
+  return (
+    <div>
+      <h1>Meine Vega-Lite Visualisierung</h1>
+      <VegaLite spec={visualizationSpec} />
+    </div>
+  );
 }
 
 export default App;
